@@ -16,15 +16,11 @@
  * limitations under the License
  */
 
-import 'dart:io';
-import 'dart:ui' as ui;
-
 import 'package:camera/camera.dart';
 import 'package:face_recog/utils.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -42,7 +38,6 @@ class FacePage extends StatefulWidget {
 }
 
 class _FacePageState extends State<FacePage> {
-  File _imageFile;
   List<Face> _faces;
   bool isLoading = false, _isDetecting = false;
   CameraController _camera;
